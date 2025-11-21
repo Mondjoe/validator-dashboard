@@ -10,3 +10,14 @@
   });
 })();
 </script>
+fetch('capsule.json')
+  .then(response => response.json())
+  .then(data => {
+    const tokenList = document.getElementById('token-list');
+    data.memeTokens.forEach(token => {
+      const li = document.createElement('li');
+      li.textContent = `${token.name} (${token.symbol}) • Supply: ${token.supply} • Chain: ${token.chain}`;
+      tokenList.appendChild(li);
+    });
+  })
+  .catch(error => console.error('Error loading memeTokens:', error));
