@@ -1,6 +1,26 @@
 {
   "snapshot": "930187",
-  "badge": "Discothe 5",
-  "validator": "Mond Joe",
-  "emails": ["charmjoe71@gmail.com", "kyawzayya4788@gmail.com"]
+  "badgeTier": "Discothe 5",
+  "validator": "Mond Joe • CHARM",
+  "wallets": {
+    "solana": ["5BPiE9Ek9XCUcHnJSoG1C1G66QVWdpGsJDyQrqWBFCxs"]
+  },
+  "contributors": [
+    { "name": "basedbrett / penguin", "badge": "Discothe 5", "snapshot": "930187", "reaction": "mirrored", "time": "2025-11-20T14:05:00Z" },
+    { "name": "Trio", "badge": "Discothe 5", "snapshot": "930187", "reaction": "approved", "time": "2025-11-20T14:06:00Z" }
+  ],
+  "funding": [
+    { "source": "Treasury", "amount": 0, "unit": "USDT", "direction": "in", "tx": "N/A" },
+    { "source": "Operations", "amount": 0, "unit": "USDT", "direction": "out", "tx": "N/A" }
+  ],
+  "memeTokens": [
+    { "name": "x402.meme #1", "symbol": "X4021", "supply": "1000000", "chain": "Base" },
+    { "name": "x402.meme #2", "symbol": "X4022", "supply": "500000", "chain": "BNB" },
+    { "name": "x402.meme #3", "symbol": "X4023", "supply": "250000", "chain": "Solana" }
+  ],
+  "winners": [
+    { "rank": 1, "name": "Contributor A", "token": "X4021" },
+    { "rank": 2, "name": "Contributor B", "token": "X4022" },
+    { "rank": 3, "name": "Contributor C", "token": "X4023" }
+  ]
 }
