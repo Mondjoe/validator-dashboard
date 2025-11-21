@@ -24,3 +24,15 @@
     { "rank": 3, "name": "Contributor C", "token": "X4023" }
   ]
 }
+{
+  "memeTokens": [
+    { "name": "x402.meme #1", "symbol": "X4021", "supply": "1000000", "chain": "Base" },
+    { "name": "x402.meme #2", "symbol": "X4022", "supply": "500000", "chain": "BNB" },
+    { "name": "x402.meme #3", "symbol": "X4023", "supply": "250000", "chain": "Solana" }
+  ],
+  "winners": [
+    { "rank": 1, "name": "Contributor A", "token": "X4021" },
+    { "rank": 2, "name": "Contributor B", "token": "X4022" },
+    { "rank": 3, "name": "Contributor C", "token": "X4023" }
+  ]
+}
