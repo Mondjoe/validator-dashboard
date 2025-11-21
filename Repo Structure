@@ -1,0 +1,9 @@
+validator-dashboard/
+├── index.html
+├── style.css
+├── capsule.json
+├── tokens.js
+├── winners.js
+├── wallets.js
+├── funding.js
+├── charm-badge.png
