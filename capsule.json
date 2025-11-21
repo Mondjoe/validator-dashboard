@@ -72,3 +72,10 @@
     { "rank": 3, "name": "Contributor C", "token": "X4023" }
   ]
 }
+{
+  "winners": [
+    { "rank": 1, "name": "Contributor A", "token": "X4021" },
+    { "rank": 2, "name": "Contributor B", "token": "X4022" },
+    { "rank": 3, "name": "Contributor C", "token": "X4023" }
+  ]
+}
