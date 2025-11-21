@@ -21,3 +21,15 @@ fetch('capsule.json')
     });
   })
   .catch(error => console.error('Error loading winners:', error));
+fetch('capsule.json')
+  .then(response => response.json())
+  .then(data => {
+    const winnerList = document.getElementById('winner-list');
+    if (!winnerList || !data.winners) return;
+    data.winners.forEach(winner => {
+      const li = document.createElement('li');
+      li.textContent = `#${winner.rank} — ${winner.name} (${winner.token})`;
+      winnerList.appendChild(li);
+    });
+  })
+  .catch(error => console.error('Error loading winners:', error));
