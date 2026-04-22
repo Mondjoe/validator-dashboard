@@ -122,3 +122,12 @@ GitHub: https://github.com/Charmjoe
 
 ## License
 This project is private and not licensed for public distribution.
+## 🛡️ Operator Identity — Dark Warrior Map
+
+**Operator:** Charm Joe  
+**Identity Mode:** Dark Warrior  
+**Ecosystem:** Charm Capsule · Validator DB · FutureVictoryGov · Check-In Engine  
+**Chains:** ETH · SOL · TRON · TON · BASE · BNB · OP · ARB  
+
+A unified operator identity spanning chains, dashboards, proofs, contracts, and contributor history.  
+Built for clarity. Designed for sovereignty. Anchored across ecosystems.
