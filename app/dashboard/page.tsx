@@ -1,7 +1,8 @@
-export default function DashboardPage() {
+export default function Home() {
   return (
-    <div>
-      <h1>Dashboard</h1>
+    <div style={{ padding: 40 }}>
+      <h1>Validator Dashboard</h1>
+      <p>Home page loaded successfully.</p>
     </div>
   );
 }
