@@ -1,6 +1,5 @@
 "use client";
 
-import { WagmiProvider } from "wagmi";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { config } from "./providers/evm-provider";
 
@@ -14,7 +13,6 @@ const queryClient = new QueryClient();
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
         <SolanaProvider>
           <TonProvider>
@@ -28,6 +26,5 @@ export function Providers({ children }: { children: React.ReactNode }) {
           </TonProvider>
         </SolanaProvider>
       </QueryClientProvider>
-    </WagmiProvider>
   );
 }
