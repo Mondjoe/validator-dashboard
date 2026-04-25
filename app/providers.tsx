@@ -1,7 +1,6 @@
 "use client";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { config } from "./providers/evm-provider";
 
 import { SolanaProvider } from "./providers/solana-provider";
 import { TonProvider } from "./providers/ton-provider";
