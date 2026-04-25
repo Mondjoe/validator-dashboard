@@ -1,6 +1,6 @@
 "use client";
 
-import { JsonRpcProvider, Connection } from "@mysten/sui.js";
+import { JsonRpcProvider, Connection } from "@mysten/sui";
 import { createContext, useContext } from "react";
 
 const SuiContext = createContext<JsonRpcProvider | null>(null);
