@@ -5,7 +5,7 @@ export async function GET() {
 
   for (const v of VALIDATORS) {
     const rewardsRes = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/rewards?chain=${v.chain}&pubkey=${v.pubkey}`
+     `${process.env.NEXT_PUBLIC_BASE_URL}/api/rewards?chain=${v.chain}`
     );
     const rewards = await rewardsRes.json();
 
@@ -22,7 +22,7 @@ export async function GET() {
     results.push({
       id: v.id,
       chain: v.chain,
-      pubkey: v.pubkey,
+      &pubkey=${v.pubkey}
       rewards,
       uptime: uptime.data?.efficiency || 0,
       performance: performance.data || {}
