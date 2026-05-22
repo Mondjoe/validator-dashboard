@@ -1,6 +1,6 @@
 'use client'
 
-import DashboardLayout from '@/components/DashboardLayout'
+import DashboardLayout from "@/components/ui/DashboardLayout";
 import { portfolioData, recentTransactions, tokenHoldings, chainDistribution } from '@/lib/mockData'
 import { AreaChart, Area, PieChart, Pie, Cell, ResponsiveContainer, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
 import { ArrowUpRight, TrendingUp } from 'lucide-react'
