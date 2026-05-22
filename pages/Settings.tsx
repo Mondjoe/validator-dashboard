@@ -5,7 +5,7 @@
  * - Display options
  */
 
-import DashboardLayout from '@/components/DashboardLayout';
+import DashboardLayout from "@/components/ui/DashboardLayout";
 import { walletAddressFull } from '@/lib/mockData';
 import { Bell, Copy, Eye, Globe, Moon, Shield, Wallet } from 'lucide-react';
 import { useState } from 'react';

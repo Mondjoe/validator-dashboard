@@ -5,7 +5,7 @@
  * - Transaction cost estimator
  */
 
-import DashboardLayout from '@/components/DashboardLayout';
+import DashboardLayout from "@/components/ui/DashboardLayout";
 import { mockGasHistory } from '@/lib/mockData';
 import { cn } from '@/lib/utils';
 import { Flame, TrendingDown, TrendingUp, Zap } from 'lucide-react';

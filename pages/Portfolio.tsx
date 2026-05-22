@@ -5,7 +5,7 @@
  * - P&L tracking
  */
 
-import DashboardLayout from '@/components/DashboardLayout';
+import DashboardLayout from "@/components/ui/DashboardLayout";
 import { mockTokens, mockPortfolioHistory, portfolioStats, chainStats } from '@/lib/mockData';
 import { cn } from '@/lib/utils';
 import { ArrowDownRight, ArrowUpRight, TrendingUp } from 'lucide-react';

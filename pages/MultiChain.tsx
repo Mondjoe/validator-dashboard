@@ -4,7 +4,7 @@
  * - Cross-chain portfolio breakdown
  */
 
-import DashboardLayout from '@/components/DashboardLayout';
+import DashboardLayout from "@/components/ui/DashboardLayout";
 import { chainStats } from '@/lib/mockData';
 import { cn } from '@/lib/utils';
 import { Activity, ArrowUpRight, Globe, Layers, Zap } from 'lucide-react';

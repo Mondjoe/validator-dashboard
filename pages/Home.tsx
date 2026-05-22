@@ -6,7 +6,7 @@
  * - NFT preview strip
  */
 
-import DashboardLayout from '@/components/DashboardLayout';
+import DashboardLayout from "@/components/ui/DashboardLayout";
 import {
   mockNFTs,
   mockTransactions,

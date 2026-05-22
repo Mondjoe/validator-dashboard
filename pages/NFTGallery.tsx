@@ -5,7 +5,7 @@
  * - Hover reveal with price and chain info
  */
 
-import DashboardLayout from '@/components/DashboardLayout';
+import DashboardLayout from "@/components/ui/DashboardLayout";
 import { mockNFTs, type NFT } from '@/lib/mockData';
 import { cn } from '@/lib/utils';
 import { ArrowUpRight, Filter, Grid2X2, Grid3X3, Search, SlidersHorizontal } from 'lucide-react';

@@ -5,7 +5,7 @@
  * - Hash links with copy functionality
  */
 
-import DashboardLayout from '@/components/DashboardLayout';
+import DashboardLayout from "@/components/ui/DashboardLayout";
 import { mockTransactions } from '@/lib/mockData';
 import { cn } from '@/lib/utils';
 import { CheckCircle, Clock, Copy, ExternalLink, Filter, XCircle } from 'lucide-react';
