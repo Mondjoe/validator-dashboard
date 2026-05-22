@@ -1,30 +1,71 @@
-const STORAGE_KEY = "incidents";
+// Mock contract activity
+export const mockContractActivity = [
+  { id: 1, contract: "0xABC123", action: "Swap", amount: 1.2, chain: "ETH" },
+  { id: 2, contract: "0xDEF456", action: "Stake", amount: 50, chain: "SOL" },
+];
 
-export function loadIncidents() {
-  if (typeof window === "undefined") return [];
-  try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-  } catch {
-    return [];
-  }
-}
+// Mock gas history
+export const mockGasHistory = [
+  { timestamp: Date.now() - 3600_000, gas: 32 },
+  { timestamp: Date.now(), gas: 28 },
+];
 
-export function addIncident(incident: any) {
-  const list = loadIncidents();
-  list.unshift({
-    type: "incident",
-    timestamp: Date.now(),
-    ...incident,
-  });
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
-}
+// Mock transactions
+export const mockTransactions = [
+  { id: 1, hash: "0xaaa", amount: 0.5, chain: "ETH" },
+  { id: 2, hash: "0xbbb", amount: 2.1, chain: "BNB" },
+];
 
-export function addSessionEvent(event: any) {
-  const list = loadIncidents();
-  list.unshift({
-    type: "session-event",
-    timestamp: Date.now(),
-    ...event,
-  });
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
-}
+// Mock NFTs
+export const mockNFTs = [
+  { id: 1, name: "CryptoPunk #123", chain: "ETH" },
+  { id: 2, name: "DeGod #88", chain: "SOL" },
+];
+
+// Portfolio stats
+export const portfolioStats = {
+  totalValue: 12345,
+  dailyChange: 2.5,
+  weeklyChange: -1.2,
+};
+
+// Chain stats
+export const chainStats = [
+  { chain: "ETH", value: 6000 },
+  { chain: "SOL", value: 2000 },
+  { chain: "BNB", value: 1500 },
+];
+
+// Mock tokens
+export const mockTokens = [
+  { symbol: "ETH", balance: 1.23, price: 3200 },
+  { symbol: "SOL", balance: 50, price: 150 },
+];
+
+// Portfolio history
+export const mockPortfolioHistory = [
+  { timestamp: Date.now() - 86400_000, value: 11000 },
+  { timestamp: Date.now(), value: 12345 },
+];
+
+// Wallet address
+export const walletAddressFull = "0x1234567890abcdef1234567890abcdef12345678";
+
+// Portfolio data
+export const portfolioData = {
+  totalValue: 12345,
+  tokens: mockTokens,
+};
+
+// Chain distribution
+export const chainDistribution = [
+  { chain: "ETH", percent: 60 },
+  { chain: "SOL", percent: 25 },
+  { chain: "BNB", percent: 15 },
+];
+
+// Recent transactions
+export const recentTransactions = mockTransactions;
+
+// Token holdings
+export const tokenHoldings = mockTokens;
