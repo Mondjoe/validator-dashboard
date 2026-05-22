@@ -1,13 +1,83 @@
-:root {
-  color-scheme: dark;
-}
+/* Operator Neon Theme */
 
 body {
-  margin: 0;
-  background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
-  color: #e5e7eb;
+  background: #050507;
+  color: #e5e5e5;
+  font-family: "Inter", sans-serif;
 }
 
-input, select, button {
-  font-family: inherit;
+/* Cyber grid background */
+.operator-grid {
+  background: radial-gradient(circle at 20% 20%, #0d0d12, #050507 60%);
+  background-size: cover;
+  position: relative;
+}
+
+.operator-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(#0f0f12 1px, transparent 1px),
+    linear-gradient(90deg, #0f0f12 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* Neon panel */
+.panel {
+  background: #0c0c10;
+  border: 1px solid #1f1f28;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+  transition: 0.25s ease;
+}
+
+.panel:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  border-color: #2affff;
+}
+
+/* Neon text glow */
+.neon {
+  color: #2affff;
+  text-shadow: 0 0 10px #2affff;
+}
+
+/* Smooth fade */
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fullscreen-panel {
+  transform: scale(1.02);
+  box-shadow: 0 0 35px rgba(0,255,255,0.25);
+  transition: 0.3s ease;
+}
+.btn-neon {
+  padding: 8px 14px;
+  background: #0c0c10;
+  border: 1px solid #2affff;
+  color: #2affff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-neon:hover {
+  box-shadow: 0 0 15px rgba(0,255,255,0.4);
+}
+.mission-panel {
+  transition: 0.3s ease;
+}
+
+:fullscreen .mission-panel {
+  transform: scale(1.02);
+  box-shadow: 0 0 35px rgba(0,255,255,0.25);
 }

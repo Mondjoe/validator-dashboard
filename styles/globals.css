@@ -1,0 +1,113 @@
+:root {
+  --bg-primary: #0b0c0f;
+  --bg-secondary: #111317;
+  --bg-panel: #16181d;
+  --bg-panel-alt: #1c1f25;
+
+  --text-primary: #e6e6e6;
+  --text-secondary: #9a9a9a;
+
+  --accent-operator: #00f0ff;
+  --accent-operator-soft: rgba(0, 240, 255, 0.15);
+
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.15);
+
+  --radius: 12px;
+  --transition: 0.25s ease;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+
+.panel:hover {
+  border-color: var(--accent-operator);
+  box-shadow: 0 0 12px var(--accent-operator-soft);
+}
+
+button {
+  background: var(--bg-panel-alt);
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button:hover {
+  border-color: var(--accent-operator);
+  box-shadow: 0 0 10px var(--accent-operator-soft);
+}
+
+select {
+  background: var(--bg-panel);
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+select:hover {
+  border-color: var(--accent-operator);
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+.operator-accent-line {
+  width: 100%;
+  height: 2px;
+  background: var(--accent-operator);
+  opacity: 0.6;
+  margin: 12px 0 20px 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-operator-soft);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-operator);
+}
