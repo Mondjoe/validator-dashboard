@@ -9,7 +9,6 @@ export async function GET() {
     );
     const rewards = await rewardsRes.json();
 
-    // Disabled pubkey-based calls (your validators do not have pubkey)
     const uptime = { data: { efficiency: 0 } };
     const performance = { data: {} };
 

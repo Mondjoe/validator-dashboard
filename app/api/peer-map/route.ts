@@ -1,32 +1,13 @@
-export async function GET(req: Request) {
-  const { searchParams } = new URL(req.url);
-  const chain = searchParams.get("chain");
-
-  const peersRes = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/peers?chain=${chain}`
-  );
-  const peers = await peersRes.json();
-
-  if (peers.error) return Response.json(peers);
-
+export async function GET() {
   const results: any[] = [];
 
-for (const peer of peers) {
-  const geoRes = await fetch(`https://ipapi.co/${peer.ip}/json/`);
-  const geo = await geoRes.json();
-  results.push(geo);
-}
+  const peers = [
+    { ip: "8.8.8.8" },
+    { ip: "1.1.1.1" }
+  ];
 
-return Response.json({ peers: results });
-
-    const geoRes = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/geo`,
-      {
-        method: "POST",
-        body: JSON.stringify({ ip })
-      }
-    );
-
+  for (const peer of peers) {
+    const geoRes = await fetch(`https://ipapi.co/${peer.ip}/json/`);
     const geo = await geoRes.json();
     results.push(geo);
   }
