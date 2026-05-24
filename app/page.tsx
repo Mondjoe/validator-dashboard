@@ -25,9 +25,6 @@ import { ArrowUpRight, TrendingUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
-  return (
-    <DashboardLayout>
-      {/* Stats Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         {[
           { label: 'Total Portfolio Value', value: '$68,421.05', change: '+4.8%', color: '#00F5FF' },
