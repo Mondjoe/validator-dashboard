@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils'
 
 export default function Home() {
   return (
-    <DashboardLayout title="Dashboard" subtitle="Portfolio overview & analytics">
+    <DashboardLayout>
       {/* Stats Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         {[
