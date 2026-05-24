@@ -132,8 +132,7 @@ export default function Home() {
         <span className="text-xs font-mono text-white/80">{chain.percentage}%</span>
       </div>
     ))}
-  </div>
-     </div>
+   </div>
       {/* Recent Transactions & Token Holdings */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Recent Transactions */}
@@ -160,21 +159,16 @@ export default function Home() {
                   >
                     {tx.type}
                   </div>
-                  <div>
                     <div className="text-xs font-mono text-white">{tx.name}</div>
                     <div className="text-[10px] text-white/40">{tx.time}</div>
                   </div>
-                </div>
                 <div className="text-right">
                   <div className="text-xs font-mono text-white">{tx.amount}</div>
                   <div className={cn('text-[10px] font-mono', tx.status === 'Confirmed' ? 'text-[#39FF14]' : 'text-[#FF6B00]')}>
                     {tx.status}
                   </div>
-                </div>
+                 ))}
               </div>
-            ))}
-          </div>
-        </div>
 
         {/* Token Holdings */}
         <div
@@ -189,23 +183,17 @@ export default function Home() {
                   <div className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold" style={{ background: `${token.color}20`, color: token.color }}>
                     {token.symbol[0]}
                   </div>
-                  <div>
                     <div className="text-xs font-mono text-white">{token.symbol}</div>
                     <div className="text-[10px] text-white/40">{token.balance} {token.symbol}</div>
                   </div>
-                </div>
                 <div className="text-right">
                   <div className="text-xs font-mono text-white">${token.value.toLocaleString()}</div>
                   <div className={cn('text-[10px] font-mono flex items-center justify-end gap-0.5', token.change >= 0 ? 'text-[#39FF14]' : 'text-[#FF006E]')}>
                     <TrendingUp className="w-3 h-3" />
                     {token.change}%
                   </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </DashboardLayout>
-  )
-}
+                  ))}
+                 </div>
+               </DashboardLayout>
+               )
+              }
