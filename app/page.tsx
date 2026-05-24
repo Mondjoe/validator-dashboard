@@ -1,5 +1,6 @@
 'use client'
 
+import { mockPortfolioHistory } from "@/lib/mockData";
 import DashboardLayout from "@/components/ui/DashboardLayout";
 import { portfolioData, recentTransactions, tokenHoldings, chainDistribution } from '@/lib/mockData'
 import { AreaChart, Area, PieChart, Pie, Cell, ResponsiveContainer, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
@@ -50,62 +51,75 @@ export default function Home() {
             <p className="text-xs text-white/40">Last 5 months</p>
           </div>
           <ResponsiveContainer width="100%" height={300}>
-            <AreaChart data={portfolioData}>
-              <defs>
-                <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#00F5FF" stopOpacity={0.3} />
-                  <stop offset="95%" stopColor="#00F5FF" stopOpacity={0} />
-                </linearGradient>
-              </defs>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
-              <XAxis dataKey="date" stroke="rgba(255,255,255,0.3)" style={{ fontSize: '12px' }} />
-              <YAxis stroke="rgba(255,255,255,0.3)" style={{ fontSize: '12px' }} />
-              <Tooltip
-                contentStyle={{
-                  background: 'rgba(5,8,16,0.95)',
-                  border: '1px solid rgba(0,245,255,0.3)',
-                  borderRadius: '8px',
-                }}
-                labelStyle={{ color: '#00F5FF' }}
-              />
-              <Area type="monotone" dataKey="value" stroke="#00F5FF" fillOpacity={1} fill="url(#colorValue)" />
-            </AreaChart>
-          </ResponsiveContainer>
+  <AreaChart data={mockPortfolioHistory}>
+    <defs>
+      <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="5%" stopColor="#00F5FF" stopOpacity={0.3} />
+        <stop offset="95%" stopColor="#00F5FF" stopOpacity={0} />
+      </linearGradient>
+    </defs>
+    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
+    <XAxis
+  dataKey="timestamp"
+  stroke="rgba(255,255,255,0.3)"
+  style={{ fontSize: '12px' }}
+  tickFormatter={(t) => new Date(t).toLocaleDateString()}
+/>
+    <YAxis stroke="rgba(255,255,255,0.3)" style={{ fontSize: '12px' }} />
+    <Tooltip
+      contentStyle={{
+        background: 'rgba(5,8,16,0.95)',
+        border: '1px solid rgba(0,245,255,0.3)',
+        borderRadius: '8px',
+      }}
+      labelStyle={{ color: '#00F5FF' }}
+    />
+    <Area type="monotone" dataKey="value" stroke="#00F5FF" fillOpacity={1} fill="url(#colorValue)" />
+  </AreaChart>
+</ResponsiveContainer>
         </div>
 
         {/* Chain Distribution */}
-        <div
-          className="rounded-xl p-5"
-          style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(139,92,246,0.1)' }}
-        >
-          <h2 className="text-sm font-bold text-white mb-4">Chain Distribution</h2>
-          <ResponsiveContainer width="100%" height={300}>
-            <PieChart>
-              <Pie data={chainDistribution} cx="50%" cy="50%" innerRadius={60} outerRadius={100} paddingAngle={2} dataKey="value">
-                {chainDistribution.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={entry.color} />
-                ))}
-              </Pie>
-              <Tooltip
-                contentStyle={{
-                  background: 'rgba(5,8,16,0.95)',
-                  border: '1px solid rgba(139,92,246,0.3)',
-                  borderRadius: '8px',
-                }}
-              />
-            </PieChart>
-          </ResponsiveContainer>
-          <div className="mt-4 space-y-2">
-            {chainDistribution.map((chain) => (
-              <div key={chain.name} className="flex justify-between">
-                <span className="text-xs text-white/60">{chain.name}</span>
-                <span className="text-xs font-mono text-white/80">{chain.percentage}%</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+<div
+  className="rounded-xl p-5"
+  style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(139,92,246,0.1)' }}
+>
+  <h2 className="text-sm font-bold text-white mb-4">Chain Distribution</h2>
 
+  <ResponsiveContainer width="100%" height={300}>
+    <PieChart>
+      <Pie
+        data={chainDistribution}
+        cx="50%"
+        cy="50%"
+        innerRadius={60}
+        outerRadius={100}
+        paddingAngle={2}
+        dataKey="percent"
+      >
+        {chainDistribution.map((entry, index) => (
+          <Cell key={`cell-${index}`} fill={entry.color} />
+        ))}
+      </Pie>
+      <Tooltip
+        contentStyle={{
+          background: 'rgba(5,8,16,0.95)',
+          border: '1px solid rgba(139,92,246,0.3)',
+          borderRadius: '8px',
+        }}
+      />
+    </PieChart>
+  </ResponsiveContainer>
+
+  <div className="mt-4 space-y-2">
+    {chainDistribution.map((chain) => (
+      <div key={chain.name} className="flex justify-between">
+        <span className="text-xs text-white/60">{chain.name}</span>
+        <span className="text-xs font-mono text-white/80">{chain.percentage}%</span>
+      </div>
+    ))}
+  </div>
+     </div>
       {/* Recent Transactions & Token Holdings */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Recent Transactions */}
