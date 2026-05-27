@@ -38,8 +38,8 @@ export const chainStats = [
 
 // Mock tokens
 export const mockTokens = [
-  { symbol: "ETH", balance: 1.23, price: 3200 },
-  { symbol: "SOL", balance: 50, price: 150 },
+  { symbol: "ETH", balance: 1.23, price: 3200, color: "#00F5FF" },
+  { symbol: "SOL", balance: 50, price: 150, color: "#8B5CF6" },
 ];
 
 // Portfolio history
