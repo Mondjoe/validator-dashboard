@@ -6,17 +6,14 @@ import { VALIDATORS } from "@/lib/validators";
 export function ValidatorSwitcher({ onSelect }: { onSelect: (v: any) => void }) {
   const [selected, setSelected] = useState(VALIDATORS[0].id);
 
-  useEffect(() => {
-    const saved = localStorage.getItem("selected-validator");
-    if (saved) {
-      setSelected(saved);
-      const v = VALIDATORS.find((x) => x.id === saved);
-    if (v) {
-  onSelect(v);
-} else {
-  onSelect(VALIDATORS[0]);
-}
-  }, []);
+ useEffect(() => {
+  const v = VALIDATORS.find(x => x.id === selected);
+  if (v) {
+    onSelect(v);
+  } else {
+    onSelect(VALIDATORS[0]);
+  }
+}, []);
 
   function choose(id: string) {
     setSelected(id);
