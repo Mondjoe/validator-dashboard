@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { VALIDATORS } from "@/lib/VALIDATORS";
+import { VALIDATORS } from "@/lib/validators";
 
 export function ValidatorSwitcher({ onSelect }: { onSelect: (v: any) => void }) {
   const [selected, setSelected] = useState(VALIDATORS[0].id);
