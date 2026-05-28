@@ -41,7 +41,7 @@ export function ValidatorSwitcher({ onSelect }: { onSelect: (v: any) => void }) 
             transition: "0.2s",
           }}
         >
-          {v.label}
+          {v.name}
         </div>
       ))}
     </div>
