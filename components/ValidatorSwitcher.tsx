@@ -11,10 +11,11 @@ export function ValidatorSwitcher({ onSelect }: { onSelect: (v: any) => void }) 
     if (saved) {
       setSelected(saved);
       const v = VALIDATORS.find((x) => x.id === saved);
-      if (v) onSelect(v);
-    } else {
-      onSelectVALIDATORS[0]);
-    }
+    if (v) {
+  onSelect(v);
+} else {
+  onSelect(VALIDATORS[0]);
+}
   }, []);
 
   function choose(id: string) {
