@@ -1,32 +1,32 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { validators } from "@/lib/validators";
+import { VALIDATORS } from "@/lib/VALIDATORS";
 
 export function ValidatorSwitcher({ onSelect }: { onSelect: (v: any) => void }) {
-  const [selected, setSelected] = useState(validators[0].id);
+  const [selected, setSelected] = useState(VALIDATORS[0].id);
 
   useEffect(() => {
     const saved = localStorage.getItem("selected-validator");
     if (saved) {
       setSelected(saved);
-      const v = validators.find((x) => x.id === saved);
+      const v = VALIDATORS.find((x) => x.id === saved);
       if (v) onSelect(v);
     } else {
-      onSelect(validators[0]);
+      onSelectVALIDATORS[0]);
     }
   }, []);
 
   function choose(id: string) {
     setSelected(id);
     localStorage.setItem("selected-validator", id);
-    const v = validators.find((x) => x.id === id);
+    const v = VALIDATORS.find((x) => x.id === id);
     if (v) onSelect(v);
   }
 
   return (
     <div className="panel fade-in" style={{ display: "flex", gap: 10 }}>
-      {validators.map((v) => (
+      {VALIDATORS.map((v) => (
         <div
           key={v.id}
           onClick={() => choose(v.id)}
