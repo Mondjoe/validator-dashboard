@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-const ValidatorsPage = () => {
+export default function ValidatorsPage() {
   const validators = [
     { id: 1, name: "Charm Node Alpha", status: "Active", uptime: "99.99%", rewards: "1.24 ETH", health: "Excellent" },
     { id: 2, name: "Charm Node Beta", status: "Active", uptime: "99.95%", rewards: "0.85 ETH", health: "Good" },
@@ -10,7 +10,7 @@ const ValidatorsPage = () => {
   ];
 
   return (
-    <div className="p-6 bg-[#0d0d0d] min-height-screen text-white">
+    <div className="p-6 bg-[#0d0d0d] min-h-screen text-white">
       <div className="mb-8">
         <h1 className="text-2xl font-bold mb-2">Validators Management</h1>
         <p className="text-gray-400">Monitor and manage your active validator nodes across multiple chains.</p>
@@ -55,9 +55,9 @@ const ValidatorsPage = () => {
                 <td className="p-4 font-mono">{node.uptime}</td>
                 <td className="p-4 text-[#2affff]">{node.rewards}</td>
                 <td className="p-4">
-                  <div className="w-full bg-gray-700 rounded-full h-1.5 max-w-[100px]">
+                  <div className="w-full bg-gray-800 h-1.5 max-w-[100px] rounded-full overflow-hidden">
                     <div 
-                      className={`h-1.5 rounded-full ${node.health === 'Excellent' ? 'bg-green-400' : node.health === 'Good' ? 'bg-yellow-400' : 'bg-red-400'}`} 
+                      className={`h-full ${node.health === 'Excellent' ? 'bg-green-400' : node.health === 'Good' ? 'bg-yellow-400' : 'bg-red-400'}`} 
                       style={{ width: node.health === 'Excellent' ? '100%' : node.health === 'Good' ? '70%' : '10%' }}
                     ></div>
                   </div>
@@ -72,4 +72,4 @@ const ValidatorsPage = () => {
       </div>
     </div>
   );
-};
+}

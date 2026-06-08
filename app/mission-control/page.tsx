@@ -1,21 +1,26 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { getGasPrice } from '@/lib/blockchain'; // စောစောက ကျွန်တော်ပေးထားတဲ့ lib ဖိုင်
+import { getGasPrice } from '@/lib/blockchain';
 import { motion } from 'framer-motion';
 
-const MissionControl = () => {
+export default function MissionControlPage() {
   const [gas, setGas] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchGas = async () => {
-      const data = await getGasPrice();
-      setGas(data);
-      setLoading(false);
+      try {
+        const data = await getGasPrice();
+        setGas(data);
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
     };
     fetchGas();
-    const interval = setInterval(fetchGas, 15000); // 15 စက္ကန့်တိုင်း တစ်ခါ update လုပ်မယ်
+    const interval = setInterval(fetchGas, 15000);
     return () => clearInterval(interval);
   }, []);
 
@@ -33,12 +38,10 @@ const MissionControl = () => {
           {loading ? (
             <div className="animate-pulse h-8 bg-gray-800 rounded w-20"></div>
           ) : (
-            <div className="text-2xl font-mono font-bold text-[#2affff]">{gas?.baseFee} Gwei</div>
+            <div className="text-2xl font-mono font-bold text-[#2affff]">{gas?.baseFee || '0'} Gwei</div>
           )}
           <div className="text-[10px] text-green-400 mt-2">● Live Updates</div>
         </motion.div>
-
-        {/* တခြား Card တွေကိုလည်း ဒီလိုပဲ data ချိတ်လို့ရပါတယ် */}
       </div>
 
       <div className="bg-[#1a1a1a] p-8 rounded-3xl border border-dashed border-[#2affff30] flex flex-col items-center justify-center min-h-[300px]">
@@ -51,4 +54,4 @@ const MissionControl = () => {
       </div>
     </div>
   );
-};
+}
