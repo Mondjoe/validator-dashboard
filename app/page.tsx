@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { useAccount } from 'wagmi';
-import { fetchNFTs, fetchTokenBalances, fetchTransactions } from "@/lib/alchemy";
-import { mockPortfolioHistory, chainDistribution } from "@/lib/mockData";
+import { fetchNFTs, fetchTokenBalances, fetchTransactions } from "../lib/alchemy";
+import { mockPortfolioHistory, chainDistribution } from "../lib/mockData";
+import { cn } from "../lib/utils"; //
 import DashboardLayout from "@/components/ui/DashboardLayout";
 import { AreaChart, Area, PieChart, Pie, Cell, ResponsiveContainer, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
 import { ArrowUpRight, Loader2 } from "lucide-react";
