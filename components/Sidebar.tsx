@@ -23,8 +23,9 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 import { useLocation } from 'wouter';
-import { walletAddressFull } from "@/lib/mockData";
-
+import { fetchNFTs, fetchTokenBalances, fetchTransactions } from "../lib/alchemy";
+import { mockPortfolioHistory, chainDistribution } from "../lib/mockData";
+import { cn } from "../lib/utils"; //
 interface NavItem {
   icon: React.ElementType;
   label: string;
