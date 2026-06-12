@@ -15,6 +15,7 @@ const NFTGallery = () => {
       <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
         <span>🖼️</span> Your NFT Collection
       </h2>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {nfts.map((nft, index) => (
           <motion.div
@@ -35,8 +36,11 @@ const NFTGallery = () => {
                 {nft.rarity}
               </div>
             </div>
+
             <div className="p-4">
-              <h3 className="font-bold mb-1 group-hover:text-[#2affff] transition-colors">{nft.name}</h3>
+              <h3 className="font-bold mb-1 group-hover:text-[#2affff] transition-colors">
+                {nft.name}
+              </h3>
               <div className="text-xs text-gray-500">Floor: 0.5 ETH</div>
             </div>
           </motion.div>
@@ -45,3 +49,5 @@ const NFTGallery = () => {
     </div>
   );
 };
+
+export default NFTGallery;
