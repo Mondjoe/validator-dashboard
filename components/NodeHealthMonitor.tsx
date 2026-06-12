@@ -6,8 +6,9 @@ import { getTonNodeHealth } from "@/lib/nodeHealthTon";
 import { getTronNodeHealth } from "@/lib/nodeHealthTron";
 
 export function NodeHealthMonitor() {
- type NodeHealth = {
-  status: any;
+type NodeHealth = {
+  status?: any;
+  block?: any;
   sync: any;
   peers: any;
 };
