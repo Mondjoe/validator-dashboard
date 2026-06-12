@@ -5,9 +5,11 @@ import { exec } from "child_process";
 export async function POST(req: Request): Promise<Response> {
   const { chain, command } = await req.json();
 
-  // FIX: narrow the type of "chain"
   type Chain = keyof typeof ALLOWED_COMMANDS;
-  const allowed = ALLOWED_COMMANDS[chain as Chain]?.[command];
+  type Command = keyof (typeof ALLOWED_COMMANDS)[Chain];
+
+  const allowed =
+    ALLOWED_COMMANDS[chain as Chain]?.[command as Command];
 
   if (!allowed) {
     return Response.json(
