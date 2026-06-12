@@ -5,6 +5,7 @@ import { CommandPalette } from '@/components/CommandPalette';
 import { RewardAnalytics } from '@/components/RewardAnalytics';
 import { VALIDATORS } from '@/lib/validators';
 import ContractOwnership from "@/components/ContractOwnership";
+import DaoGovernance from "@/components/DaoGovernance";
 
 export default function DashboardPage() {
   const validator = VALIDATORS[0];
