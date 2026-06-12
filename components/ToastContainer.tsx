@@ -14,9 +14,6 @@ export function ToastContainer() {
     return () => timers.forEach(clearTimeout);
   }, [toasts]);
 
-border: `1px solid ${colors[toast.type ?? "info"]}`,
-color: colors[toast.type ?? "info"],
-
   return (
     <div
       style={{
