@@ -79,3 +79,4 @@ const TerminalPage = () => {
     </div>
   );
 };
+export default TerminalPage;
