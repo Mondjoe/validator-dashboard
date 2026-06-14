@@ -1,21 +1,9 @@
-import { useEffect, useState } from "react";
-
-import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import React from "react";
 
 interface ManusDialogProps {
   title?: string;
-  logo?: string;
-  open?: boolean;
-  onLogin: () => void;
-  onOpenChange?: (open: boolean) => void;
-  onClose?: () => void;
+  description?: string;
+  children?: React.ReactNode;
 }
 
 export function ManusDialog({
