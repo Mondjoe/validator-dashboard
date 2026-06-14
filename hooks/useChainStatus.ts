@@ -4,12 +4,17 @@ import { useEffect, useState } from "react";
 import { pingEvm, pingSolana, pingTon, pingTron } from "@/lib/chain/ping";
 
 export function useChainStatus() {
-  const [status, setStatus] = useState({
-    evm: null,
-    solana: null,
-    ton: null,
-    tron: null,
-  });
+ const [status, setStatus] = useState<{
+  evm: number | null;
+  solana: number | null;
+  ton: number | null;
+  tron: number | null;
+}>({
+  evm: null,
+  solana: null,
+  ton: null,
+  tron: null,
+});
 
   async function refresh() {
     const [evm, sol, ton, tron] = await Promise.all([
