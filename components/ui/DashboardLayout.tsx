@@ -1,8 +1,8 @@
 "use client";
-
+import React from "react";
 import { OperatorSidebar } from "@/components/OperatorSidebar";
 
-export default function DashboardLayout({ children }) {
+export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
     <div style={{ display: "flex" }}>
       <OperatorSidebar />
