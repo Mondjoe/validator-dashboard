@@ -3,6 +3,7 @@ import React from "react";
 interface ManusDialogProps {
   title?: string;
   description?: string;
+  logo?: string;        // ← ADD THIS
   children?: React.ReactNode;
 }
 
