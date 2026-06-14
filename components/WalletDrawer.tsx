@@ -1,6 +1,5 @@
 "use client";
 
-import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useWallet as useSolanaWallet } from "@solana/wallet-adapter-react";
 import { TonConnectButton } from "@tonconnect/ui-react";
 import { useEffect, useState } from "react";
