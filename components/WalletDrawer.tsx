@@ -48,12 +48,12 @@ export default function WalletDrawer({ open, onClose }: any) {
         <div>
           <h3 className="text-lg font-semibold mb-2 text-purple-400">Solana</h3>
 
-          <button
-            onClick={() => sol.select("Phantom")}
-            className="w-full bg-purple-600 hover:bg-purple-700 p-3 rounded mb-2 transition"
-          >
-            Phantom
-          </button>
+         <div>
+  <h3 className="text-lg font-semibold mb-2 text-purple-400">Solana</h3>
+  <div className="bg-[#111] p-3 rounded border border-purple-500/20 text-gray-400 text-sm">
+    Solana wallet support coming soon
+  </div>
+</div>
 
           <button
             onClick={() => sol.select("Solflare")}
