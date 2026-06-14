@@ -44,14 +44,6 @@ export default function WalletDrawer({ open, onClose }: any) {
           </button>
         </div>
 
-        {/* EVM */}
-        <div>
-          <h3 className="text-lg font-semibold mb-2 text-blue-400">EVM</h3>
-          <div className="bg-[#111] p-3 rounded border border-blue-500/20">
-            <ConnectKitButton />
-          </div>
-        </div>
-
         {/* Solana */}
         <div>
           <h3 className="text-lg font-semibold mb-2 text-purple-400">Solana</h3>
