@@ -9,8 +9,15 @@ export function useProposal() {
   const id = useIdentity();
   const { sign } = useCapsuleSigner();
 
-  async function createAndSign({ title, description, actions }) {
-    const proposal = createProposal({ title, description, actions });
+ async function createAndSign({
+  title,
+  description,
+  actions,
+}: {
+  title: string;
+  description: string;
+  actions: any[];
+}) {
 
     return await signProposal(id, proposal, {
       solWallet: null,
