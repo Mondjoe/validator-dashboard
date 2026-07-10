@@ -1,0 +1,24 @@
+src/
+  main.ts
+  app.module.ts
+
+  charm-validator/
+    charm-validator.module.ts
+    charm-validator.service.ts
+    charm-validator.controller.ts
+    dto/
+      create-validator.dto.ts
+      update-validator.dto.ts
+
+  charm-cron/
+    charm-cron.module.ts
+    charm-cron.service.ts
+
+  charm-ingestion/
+    charm-ingestion.module.ts
+    charm-ingestion.service.ts
+
+  charm-common/
+    charm-common.module.ts
+    utils.ts
+    constants.ts
