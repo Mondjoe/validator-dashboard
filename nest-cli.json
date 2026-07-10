@@ -1,0 +1,4 @@
+p{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src"
+}
