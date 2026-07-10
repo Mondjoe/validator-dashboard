@@ -5,6 +5,3 @@
     "build": "nest build",
     "start": "node dist/main.js"
   },
-  "prisma": {
-    "seed": "ts-node prisma/seed.ts"
-  }
