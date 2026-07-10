@@ -1,0 +1,2 @@
+@Post('csv/validators')
+ingestCsvValidators(@Body('path') path: string)
