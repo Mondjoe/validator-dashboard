@@ -1,4 +1,8 @@
 import { Module } from '@nestjs/common';
+import { CharmCommonService } from './charm-common.service';
 
-@Module({})
+@Module({
+  providers: [CharmCommonService],
+  exports: [CharmCommonService]
+})
 export class CharmCommonModule {}
