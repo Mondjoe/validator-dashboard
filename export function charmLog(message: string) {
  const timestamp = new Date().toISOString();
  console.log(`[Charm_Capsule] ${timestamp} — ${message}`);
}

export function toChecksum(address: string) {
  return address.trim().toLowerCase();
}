@@ -1,0 +1,11 @@
+export const CHARM_ORG = 'Charm_Capsule';
+
+export const SUPPORTED_CHAINS = [
+  'ethereum',
+  'polygon',
+  'bsc',
+  'arbitrum',
+  'base'
+];
+
+export const VALIDATOR_DEFAULT_STATUS = 'active';
