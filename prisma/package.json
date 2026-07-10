@@ -1,0 +1,7 @@
+{
+  "name": "validator-dashboard",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "nest build",
+    "start": "node dist/main.js"
+  },
