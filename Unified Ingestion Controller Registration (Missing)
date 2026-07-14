@@ -1,0 +1,6 @@
+@Module({
+  imports: [...],
+  providers: [UnifiedIngestionService],
+  exports: [UnifiedIngestionService]
+})
+export class UnifiedIngestionModule {}

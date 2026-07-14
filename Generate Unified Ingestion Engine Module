@@ -1,0 +1,18 @@
+import { Module } from '@nestjs/common';
+import { UnifiedIngestionService } from './unified-ingestion.service';
+import { UnifiedCsvModule } from '../unified-csv/unified-csv.module';
+import { UnifiedChainModule } from '../unified-chain/unified-chain.module';
+import { CharmIngestionModule } from '../charm-ingestion/charm-ingestion.module';
+import { CharmCommonModule } from '../charm-common/charm-common.module';
+
+@Module({
+  imports: [
+    UnifiedCsvModule,
+    UnifiedChainModule,
+    CharmIngestionModule,
+    CharmCommonModule
+  ],
+  providers: [UnifiedIngestionService],
+  exports: [UnifiedIngestionService]
+})
+export class UnifiedIngestionModule {}
