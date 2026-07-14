@@ -1,3 +1,5 @@
+"use client";
+
 import NftList from "@/components/NftList";
 import { ChainStatus } from '@/components/ChainStatus';
 import { OperatorAlerts } from '@/components/OperatorAlerts';
